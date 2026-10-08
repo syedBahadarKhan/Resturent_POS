@@ -1,0 +1,590 @@
+Created At: 2026-10-01T00:34:29+05:00
+Completed At: 2026-10-01T00:34:29+05:00
+File Path: `file:///e:/Saylani_Internship/ResturentPos/src/pages/manager/ManagerDashboard.module.css`
+Total Lines: 582
+Total Bytes: 9668
+Showing lines 1 to 582
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: .dashboard {
+2:   display: flex;
+3:   flex-direction: column;
+4:   gap: 8px; /* reduced significantly */
+5:   background-color: #F7F9F8;
+6: }
+7: 
+8: .header {
+9:   display: flex;
+10:   justify-content: space-between;
+11:   align-items: center;
+12: }
+13: 
+14: .header h1 {
+15:   font-size: 24px; /* reduced */
+16:   margin-bottom: 2px;
+17:   font-weight: 600;
+18:   color: #17202A;
+19: }
+20: 
+21: .header p {
+22:   color: #94a3b8;
+23:   font-size: 13px; /* reduced */
+24: }
+25: 
+26: .headerActions {
+27:   display: flex;
+28:   gap: 8px; /* reduced */
+29: }
+30: 
+31: .primaryBtn {
+32:   background-color: #1B7F43;
+33:   color: white;
+34:   display: flex;
+35:   align-items: center;
+36:   gap: 6px;
+37:   padding: 8px 16px; /* reduced */
+38:   border-radius: 24px;
+39:   font-weight: 500;
+40:   font-size: 13px; /* reduced */
+41: }
+42: 
+43: .secondaryBtn {
+44:   background-color: transparent;
+45:   color: #17202A;
+46:   border: 1px solid #17202A;
+47:   padding: 8px 16px; /* reduced */
+48:   border-radius: 24px;
+49:   font-weight: 500;
+50:   font-size: 13px; /* reduced */
+51: }
+52: 
+53: .kpiRow {
+54:   display: grid;
+55:   grid-template-columns: repeat(6, 1fr);
+56:   gap: 8px; /* reduced for tighter packing */
+57: }
+58: 
+59: .kpiCard {
+60:   background: white;
+61:   border-radius: 10px;
+62:   padding: 8px 12px;
+63:   display: flex;
+64:   flex-direction: column;
+65:   gap: 2px;
+66:   box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+67: }
+68: 
+69: .kpiCardGreen {
+70:   background-color: #1B7F43;
+71:   color: white;
+72: }
+73: 
+74: .kpiTop {
+75:   display: flex;
+76:   justify-content: space-between;
+77:   align-items: center;
+78: }
+79: 
+80: .kpiTitle {
+81:   font-size: 12px;
+82:   font-weight: 500;
+83: }
+84: 
+85: .arrowCircle {
+86:   width: 18px;
+87:   height: 18px;
+88:   border-radius: 50%;
+89:   background: white;
+90:   display: flex;
+91:   align-items: center;
+92:   justify-content: center;
+93: }
+94: 
+95: .arrowCircleLine {
+96:   width: 18px;
+97:   height: 18px;
+98:   border-radius: 50%;
+99:   border: 1px solid #E5E7EB;
+100:   display: flex;
+101:   align-items: center;
+102:   justify-content: center;
+103: }
+104: 
+105: .kpiValue {
+106:   font-size: 18px;
+107:   font-weight: 600;
+108:   line-height: 1;
+109:   margin-top: 0;
+110: }
+111: 
+112: .kpiValueDark {
+113:   font-size: 18px;
+114:   font-weight: 600;
+115:   color: #17202A;
+116:   line-height: 1;
+117:   margin-top: 0;
+118: }
+119: 
+120: .kpiTrend {
+121:   display: flex;
+122:   align-items: center;
+123:   gap: 4px;
+124:   font-size: 9px;
+125:   color: rgba(255, 255, 255, 0.8);
+126:   margin-top: 0;
+127: }
+128: 
+129: .kpiTrendDark {
+130:   display: flex;
+131:   align-items: center;
+132:   gap: 4px;
+133:   font-size: 9px;
+134:   color: #64748B;
+135:   margin-top: 0;
+136: }
+137: 
+138: .trendBadge {
+139:   border: 1px solid rgba(255,255,255,0.4);
+140:   border-radius: 3px;
+141:   padding: 1px 4px;
+142:   font-size: 9px;
+143: }
+144: 
+145: .trendBadgeOutline {
+146:   border: 1px solid #E5E7EB;
+147:   border-radius: 3px;
+148:   padding: 1px 4px;
+149:   font-size: 9px;
+150:   color: #1B7F43;
+151: }
+152: 
+153: /* Main Grid Layout */
+154: .mainGrid {
+155:   display: grid;
+156:   grid-template-columns: 1.2fr 1.2fr 1fr;
+157:   gap: 8px; /* reduced gap */
+158:   align-items: stretch;
+159: }
+160: 
+161: /* Cards Base */
+162: .analyticsCard, .teamCard, .remindersCard, .progressCard, .projectCard, .timeTrackerCard {
+163:   background: white;
+164:   border-radius: 16px;
+165:   padding: 16px;
+166:   box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+167:   display: flex;
+168:   flex-direction: column;
+169: }
+170: 
+171: h3 {
+172:   font-size: 15px; /* reduced */
+173:   font-weight: 600;
+174:   color: #17202A;
+175:   margin: 0 0 16px 0;
+176: }
+177: 
+178: .cardHeader {
+179:   display: flex;
+180:   justify-content: space-between;
+181:   align-items: center;
+182:   margin-bottom: 16px;
+183: }
+184: 
+185: .cardHeader h3 {
+186:   margin: 0;
+187: }
+188: 
+189: .smallOutlineBtn {
+190:   display: flex;
+191:   align-items: center;
+192:   gap: 4px;
+193:   padding: 4px 12px;
+194:   border-radius: 16px;
+195:   border: 1px solid #1B7F43;
+196:   color: #1B7F43;
+197:   background: transparent;
+198:   font-size: 12px;
+199:   font-weight: 500;
+200: }
+201: 
+202: /* Revenue Analytics New Design */
+203: .analyticsHeader {
+204:   display: flex;
+205:   justify-content: space-between;
+206:   align-items: flex-start;
+207:   margin-bottom: 24px;
+208: }
+209: 
+210: .analyticsTitleSection h3 {
+211:   margin: 0 0 4px 0;
+212:   font-size: 15px;
+213:   font-weight: 500;
+214:   color: #17202A;
+215: }
+216: 
+217: .analyticsMainValue {
+218:   display: flex;
+219:   align-items: center;
+220:   gap: 12px;
+221: }
+222: 
+223: .currencyValue {
+224:   font-size: 24px;
+225:   font-weight: 600;
+226:   color: #17202A;
+227: }
+228: 
+229: .percentageBadge {
+230:   background-color: #e8f2ec;
+231:   color: #1B7F43;
+232:   padding: 2px 8px;
+233:   border-radius: 12px;
+234:   font-size: 11px;
+235:   font-weight: 600;
+236: }
+237: 
+238: .analyticsActions {
+239:   display: flex;
+240:   align-items: center;
+241:   gap: 16px;
+242: }
+243: 
+244: .legendWrapper {
+245:   display: flex;
+246:   align-items: center;
+247:   gap: 6px;
+248:   font-size: 13px;
+249:   font-weight: 500;
+250:   color: #17202A;
+251: }
+252: 
+253: .legendDot {
+254:   display: inline-block;
+255:   width: 4px;
+256:   height: 14px;
+257:   background-color: #1B7F43;
+258:   border-radius: 2px;
+259: }
+260: 
+261: .chartDropdown {
+262:   padding: 6px 12px;
+263:   border: 1px solid #E5E7EB;
+264:   border-radius: 6px;
+265:   font-size: 13px;
+266:   color: #64748B;
+267:   background-color: white;
+268:   outline: none;
+269:   cursor: pointer;
+270: }
+271: 
+272: /* Tooltip Customization */
+273: .customChartTooltip {
+274:   background-color: white;
+275:   border: 1px solid #E5E7EB;
+276:   border-radius: 8px;
+277:   padding: 12px;
+278:   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+279: }
+280: 
+281: .tooltipLegend {
+282:   display: flex;
+283:   align-items: center;
+284:   gap: 6px;
+285:   font-size: 12px;
+286:   color: #94a3b8;
+287:   margin-bottom: 4px;
+288: }
+289: 
+290: .tooltipValue {
+291:   font-size: 16px;
+292:   font-weight: 600;
+293:   color: #17202A;
+294: }
+295: 
+296: .chartContainer {
+297:   height: 200px;
+298:   position: relative;
+299:   flex-grow: 1;
+300: }
+301: 
+302: /* Team Collaboration */
+303: .teamList {
+304:   display: flex;
+305:   flex-direction: column;
+306:   gap: 12px; /* reduced */
+307:   flex-grow: 1;
+308: }
+309: 
+310: .teamItem {
+311:   display: flex;
+312:   align-items: center;
+313:   gap: 12px;
+314: }
+315: 
+316: .teamAvatar {
+317:   width: 32px; /* reduced */
+318:   height: 32px;
+319:   border-radius: 50%;
+320:   overflow: hidden;
+321:   display: flex;
+322:   align-items: center;
+323:   justify-content: center;
+324: }
+325: 
+326: .teamAvatar img {
+327:   width: 100%;
+328:   height: auto;
+329: }
+330: 
+331: .teamInfo {
+332:   flex-grow: 1;
+333: }
+334: 
+335: .teamInfo h4 {
+336:   margin: 0 0 2px 0;
+337:   font-size: 13px; /* reduced */
+338:   font-weight: 600;
+339:   color: #17202A;
+340: }
+341: 
+342: .teamInfo p {
+343:   margin: 0;
+344:   font-size: 11px;
+345:   color: #94a3b8;
+346: }
+347: 
+348: .teamInfo strong {
+349:   color: #17202A;
+350:   font-weight: 600;
+351: }
+352: 
+353: .statusPill {
+354:   padding: 2px 8px;
+355:   border-radius: 6px;
+356:   font-size: 10px;
+357:   font-weight: 600;
+358: }
+359: .success { background: #e8f2ec; color: #1B7F43; }
+360: .warning { background: #fef3c7; color: #d97706; }
+361: .danger { background: #fee2e2; color: #ef4444; }
+362: 
+363: /* Reminders */
+364: .reminderContent h4 {
+365:   font-size: 16px; /* reduced */
+366:   font-weight: 500;
+367:   color: #1B7F43;
+368:   margin: 0 0 6px 0;
+369:   line-height: 1.3;
+370: }
+371: 
+372: .reminderContent p {
+373:   font-size: 12px;
+374:   color: #94a3b8;
+375:   margin: 0 0 16px 0;
+376: }
+377: 
+378: .startMeetingBtn {
+379:   background-color: #1B7F43;
+380:   color: white;
+381:   width: 100%;
+382:   display: flex;
+383:   align-items: center;
+384:   justify-content: center;
+385:   gap: 6px;
+386:   padding: 8px 12px;
+387:   border-radius: 16px;
+388:   font-weight: 500;
+389:   font-size: 13px;
+390: }
+391: 
+392: /* Progress Donut */
+393: .donutContainer {
+394:   position: relative;
+395:   height: 120px; /* reduced */
+396:   margin-bottom: 16px;
+397: }
+398: 
+399: .donutLabel {
+400:   position: absolute;
+401:   bottom: 0;
+402:   left: 0;
+403:   right: 0;
+404:   display: flex;
+405:   flex-direction: column;
+406:   align-items: center;
+407:   justify-content: flex-end;
+408: }
+409: 
+410: .donutPercent {
+411:   font-size: 32px; /* reduced */
+412:   font-weight: 600;
+413:   color: #17202A;
+414:   line-height: 1;
+415: }
+416: 
+417: .donutText {
+418:   font-size: 11px;
+419:   color: #64748B;
+420:   margin-top: 2px;
+421: }
+422: 
+423: .progressLegend {
+424:   display: flex;
+425:   justify-content: space-between;
+426:   padding: 0 10px;
+427: }
+428: 
+429: .legendItem {
+430:   display: flex;
+431:   align-items: center;
+432:   gap: 4px;
+433:   font-size: 11px;
+434:   color: #64748B;
+435:   font-weight: 500;
+436: }
+437: 
+438: .dot {
+439:   width: 8px;
+440:   height: 8px;
+441:   border-radius: 50%;
+442: }
+443: 
+444: /* Project List */
+445: .projectList {
+446:   display: flex;
+447:   flex-direction: column;
+448:   gap: 12px;
+449: }
+450: 
+451: .projectItem {
+452:   display: flex;
+453:   align-items: center;
+454:   gap: 12px;
+455: }
+456: 
+457: .projectIcon {
+458:   width: 32px;
+459:   height: 32px;
+460:   border-radius: 50%;
+461:   display: flex;
+462:   align-items: center;
+463:   justify-content: center;
+464: }
+465: .blue { background-color: #eff6ff; }
+466: .green { background-color: #f0fdf4; }
+467: .yellow { background-color: #fefce8; }
+468: .purple { background-color: #faf5ff; }
+469: 
+470: .iconShapes {
+471:   width: 12px;
+472:   height: 12px;
+473:   background: currentColor;
+474:   border-radius: 3px;
+475: }
+476: .blue .iconShapes { color: #3b82f6; transform: rotate(45deg); }
+477: .green .iconShapes { color: #22c55e; border-radius: 50%; }
+478: .yellow .iconShapes { color: #eab308; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); background: transparent; border: 2px solid #eab308; }
+479: .purple .iconShapes { color: #a855f7; border-radius: 50%; box-shadow: 5px 0 0 #a855f7; width: 8px; height: 8px; margin-left: -5px;}
+480: 
+481: .projectInfo h4 {
+482:   margin: 0 0 2px 0;
+483:   font-size: 13px;
+484:   font-weight: 600;
+485:   color: #17202A;
+486: }
+487: 
+488: .projectInfo p {
+489:   margin: 0;
+490:   font-size: 10px;
+491:   color: #94a3b8;
+492: }
+493: 
+494: /* Time Tracker */
+495: .timeTrackerCard {
+496:   border-radius: 16px;
+497:   overflow: hidden;
+498:   position: relative;
+499:   height: 140px; /* reduced */
+500:   background-color: #0b3d20;
+501: }
+502: 
+503: .timeTrackerBg {
+504:   position: absolute;
+505:   inset: 0;
+506:   background: radial-gradient(circle at top right, #1B7F43, #0b3d20);
+507:   opacity: 0.8;
+508:   /* Add wavy texture */
+509:   background-image: repeating-radial-gradient(
+510:     circle at top right,
+511:     transparent,
+512:     transparent 10px,
+513:     rgba(255,255,255,0.05) 10px,
+514:     rgba(255,255,255,0.05) 20px
+515:   );
+516: }
+517: 
+518: .timeTrackerContent {
+519:   position: relative;
+520:   z-index: 2;
+521:   padding: 16px;
+522:   height: 100%;
+523:   display: flex;
+524:   flex-direction: column;
+525: }
+526: 
+527: .timeTrackerContent h3 {
+528:   color: white;
+529:   font-size: 13px;
+530:   font-weight: 500;
+531:   margin-bottom: auto;
+532: }
+533: 
+534: .timeDisplay {
+535:   color: white;
+536:   font-size: 28px; /* reduced */
+537:   font-weight: 600;
+538:   text-align: center;
+539:   margin-bottom: 12px;
+540: }
+541: 
+542: .timeControls {
+543:   display: flex;
+544:   justify-content: center;
+545:   gap: 12px;
+546: }
+547: 
+548: .controlBtnWhite {
+549:   width: 32px;
+550:   height: 32px;
+551:   border-radius: 50%;
+552:   background: white;
+553:   display: flex;
+554:   align-items: center;
+555:   justify-content: center;
+556: }
+557: 
+558: .controlBtnRed {
+559:   width: 32px;
+560:   height: 32px;
+561:   border-radius: 50%;
+562:   background: #EF4444;
+563:   display: flex;
+564:   align-items: center;
+565:   justify-content: center;
+566: }
+567: 
+568: @media (max-width: 1280px) {
+569:   .mainGrid {
+570:     grid-template-columns: 1fr 1fr;
+571:   }
+572: }
+573: 
+574: @media (max-width: 768px) {
+575:   .kpiRow {
+576:     grid-template-columns: 1fr 1fr;
+577:   }
+578:   .mainGrid {
+579:     grid-template-columns: 1fr;
+580:   }
+581: }
+582: 
+The above content shows the entire, complete file contents of the requested file.

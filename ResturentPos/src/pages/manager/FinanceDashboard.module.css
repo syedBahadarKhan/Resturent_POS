@@ -1,0 +1,380 @@
+.financeDashboard {
+  padding: 4px;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADER SECTION */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.headerLeft h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.headerLeft p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.periodTabs {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.tabActive {
+  background-color: white;
+  color: #17202A;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.refreshBtn, .reportBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refreshBtn {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.refreshBtn:hover {
+  background-color: #f1f5f9;
+}
+
+.reportBtn {
+  background-color: #1B7F43;
+  border: 1px solid #1B7F43;
+  color: white;
+}
+
+.reportBtn:hover {
+  background-color: #1B7F43;
+}
+
+/* KPI CARDS SECTION */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.kpiCard {
+  flex: 1;
+  min-width: 0;
+  background-color: white;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.iconBox {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeGreen {
+  background-color: #ecfdf5;
+  color: #1B7F43;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+.cardValue {
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #17202A;
+  margin-bottom: 3px;
+}
+
+.cardTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardSub {
+  font-size: 10px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* Card Borders (based on image faint borders) */
+.cardGreen { border: 1px solid #d1fae5; }
+.cardYellow { border: 1px solid #fef08a; }
+.cardBlue { border: 1px solid #dbeafe; }
+.cardPurple { border: 1px solid #ede9fe; }
+.cardPink { border: 1px solid #fce7f3; }
+
+/* CHARTS SECTION */
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+.chartPanel, .bankPanel {
+  background-color: white;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.chartHeader, .bankHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.chartTitles h3, .bankTitles h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.chartTitles p, .bankTitles p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.chartLegend {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.dotGreen { width: 8px; height: 8px; border-radius: 50%; background-color: #1B7F43; }
+.dotYellow { width: 8px; height: 8px; border-radius: 50%; background-color: #eab308; }
+.dotBlue { width: 8px; height: 8px; border-radius: 50%; background-color: #3b82f6; }
+
+.chartContainer {
+  height: 300px;
+  width: 100%;
+}
+
+.manageLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1B7F43;
+  text-decoration: none;
+}
+
+.manageLink:hover {
+  text-decoration: underline;
+}
+
+.emptyState {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* STATS GRID SECTION */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.statCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.statHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.statTitles h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.statTitles p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.emptyStateSmall {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* FULL WIDTH CHART */
+.fullWidthChart {
+  background-color: white;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  margin-top: 12px;
+}
+
+/* RECENT JOURNAL ENTRIES */
+.journalSection {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-top: 12px;
+}
+
+.journalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.journalHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.emptyStateMedium {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* QUICK LINKS GRID */
+.quickLinksGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+  padding-bottom: 12px;
+}
+
+.quickLinkCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quickLinkCard:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.quickLinkIcon {
+  font-size: 24px;
+}
+
+.quickLinkText {
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+
+@media (max-width: 1100px) {
+  .kpiGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .kpiGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

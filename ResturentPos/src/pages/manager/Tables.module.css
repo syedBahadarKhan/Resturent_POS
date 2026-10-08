@@ -1,0 +1,213 @@
+.container {
+  padding: 8px 12px;
+  background-color: #F3F4F6;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.headerLeft h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.headerLeft p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.headerRight {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.iconBtn:hover {
+  background-color: #e2e8f0;
+}
+
+.refreshIcon {
+  color: #64748b;
+}
+
+.primaryBtn {
+  background-color: #1B7F43;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  height: 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primaryBtn:hover {
+  background-color: #047857;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.statCard {
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  margin: 0 0 8px 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.statCard h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.bgWhite { background-color: #ffffff; border: 1px solid #e2e8f0; }
+.valDark { color: #17202A; }
+
+.bgGreen { background-color: #f0fdf4; border: 1px solid #dcfce7; }
+.valGreen { color: #1B7F43; }
+
+.bgRed { background-color: #fef2f2; border: 1px solid #fecaca; }
+.valRed { color: #dc2626; }
+
+.bgYellow { background-color: #fffbeb; border: 1px solid #fef3c7; }
+.valOrange { color: #d97706; }
+
+.bgBlue { background-color: #eff6ff; border: 1px solid #dbeafe; }
+.valBlue { color: #2563eb; }
+
+/* Table Grid */
+.tableGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tableItem {
+  background-color: #f0fdf4;
+  border: 1px solid #6ee7b7;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.tableNameWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #1B7F43;
+}
+
+.tableName {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.statusBadge {
+  background-color: #ffffff;
+  color: #1B7F43;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+}
+
+.tableSubtitle {
+  margin: 0 0 16px 16px;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.seatsInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-left: 16px;
+}
+
+.seatIcons {
+  display: flex;
+  gap: 4px;
+}
+
+.seat {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+}
+
+.seatsText {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.tableFooter {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.emptyText {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 500;
+}

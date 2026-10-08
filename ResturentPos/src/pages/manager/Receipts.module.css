@@ -1,0 +1,263 @@
+.receiptsContainer {
+  padding: 8px 12px;
+  background-color: #F3F4F6;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.headerLeft h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.headerLeft p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.headerRight {
+  display: flex;
+}
+
+.newBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1B7F43;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newBtn:hover {
+  background-color: #047857;
+}
+
+/* FILTER BAR */
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  border-right: 1px solid #e2e8f0;
+  padding-right: 16px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #17202A;
+}
+
+.searchBox input::placeholder {
+  color: #94a3b8;
+}
+
+.selectBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #475569;
+  cursor: pointer;
+  border-right: 1px solid #e2e8f0;
+  padding-right: 16px;
+}
+
+.amountFilter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.minMaxInput {
+  width: 60px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 4px 8px;
+  outline: none;
+  font-size: 13px;
+}
+
+/* TABLE */
+.tableContainer {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.receiptsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.receiptsTable th {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.receiptsTable td {
+  padding: 16px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+/* Row Specific Styles */
+.badgeGray {
+  background-color: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #17202A;
+  font-size: 13px;
+}
+
+.cellText {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.cellTextDark {
+  color: #17202A;
+  font-size: 14px;
+}
+
+.badgeBlue {
+  background-color: #eff6ff;
+  color: #3b82f6;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.methodCell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.amountCell {
+  font-weight: 700;
+  color: #1B7F43;
+  font-size: 14px;
+}
+
+.actionsWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.iconBtn:hover {
+  color: #475569;
+}
+
+/* PAGINATION FOOTER */
+.paginationFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.pageInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.perPageSelect {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.pageControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pageArrow {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageNumberActive {
+  background-color: #1B7F43;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}

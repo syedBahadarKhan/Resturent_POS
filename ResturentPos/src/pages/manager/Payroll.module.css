@@ -1,0 +1,212 @@
+.container {
+  padding: 8px 12px;
+  background-color: #F3F4F6;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.headerLeft h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.headerLeft p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.newRunBtn {
+  background-color: #1B7F43;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newRunBtn:hover {
+  background-color: #047857;
+}
+
+/* Layout */
+.contentLayout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Left Column */
+.leftColumn {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.runsHeader {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.runsHeader h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #17202A;
+}
+
+.runList {
+  padding: 0;
+}
+
+.runCard {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.runCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.runCardHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.draftBadge {
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.employeeCount {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.amount {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1B7F43;
+}
+
+.deleteBtn {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #fee2e2;
+  color: #ef4444;
+  padding: 8px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.deleteBtn:hover {
+  background-color: #fef2f2;
+}
+
+/* Pagination inside left column */
+.pagination {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paginationText {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pageSelect {
+  padding: 6px 24px 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background-color: #ffffff;
+  color: #475569;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.pageArrow {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  font-size: 14px;
+  cursor: default;
+  padding: 4px;
+}
+
+/* Right Column */
+.rightColumn {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.emptyState h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 14px;
+  color: #cbd5e1;
+}

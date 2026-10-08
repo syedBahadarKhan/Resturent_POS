@@ -1,0 +1,62 @@
+.ordersPage { height:100%; min-height:0; display:flex; flex-direction:column; background:#f6f8f6; color:#19241d; font-family:var(--font-family,Arial,sans-serif); border-top:4px solid #292929; }
+.topBar { min-height:70px; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:0 22px 0 32px; background:#fff; border-bottom:1px solid #dfe7e1; }
+.topBar h1 { margin:0; color:#202923; font-size:22px; font-weight:700; }
+.topActions { display:flex; align-items:center; gap:20px; }
+.globalSearch { width:min(400px,34vw); height:44px; display:flex; align-items:center; gap:11px; padding:0 15px; border:1px solid #dce5df; border-radius:9px; background:#f7f9f8; color:#7b8980; }
+.globalSearch input,.orderSearch input { width:100%; min-width:0; border:0; outline:0; background:transparent; color:#24332a; font:inherit; font-size:16px; }
+.globalSearch input::placeholder,.orderSearch input::placeholder { color:#8c9790; }
+.notificationButton { position:relative; width:44px; height:44px; display:grid; place-items:center; border:1px solid #dce5df; border-radius:9px; background:#fff; color:#53645a; }
+.notificationButton i { position:absolute; top:11px; right:12px; width:9px; height:9px; border:1px solid #fff; border-radius:50%; background:#ed8d13; }
+.accountButton { display:flex; align-items:center; gap:10px; padding:0 0 0 14px; border:0; border-left:1px solid #e2e9e4; background:transparent; color:#314137; text-align:left; }
+.accountButton > span:nth-child(2) { display:flex; flex-direction:column; gap:3px; min-width:105px; }
+.accountButton strong { color:#26352c; font-size:13px; }
+.accountButton small { color:#718078; font-size:12px; }
+.avatar { width:42px; height:42px; display:grid; place-items:center; border-radius:50%; background:#e8f1eb; color:#176c3c; font-size:13px; font-weight:700; }
+.pageContent { min-width:0; min-height:0; flex:1; overflow:auto; padding:30px 32px 24px; }
+.pageHeading { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:24px; }
+.pageHeading h2 { margin:0 0 10px; color:#101d16; font-size:28px; line-height:1.1; font-weight:500; letter-spacing:-.4px; }
+.pageHeading p { margin:0; color:#6b7f73; font-size:14px; }
+.liveBadge { display:inline-flex; align-items:center; gap:9px; padding:9px 13px; border:1px solid #dce6df; border-radius:28px; background:#fff; color:#1c2c22; font-size:12px; font-weight:600; white-space:nowrap; }
+.liveBadge i { width:10px; height:10px; border-radius:50%; background:#20a45b; box-shadow:0 0 0 5px #e1f4e8; }
+.ordersCard { min-width:0; overflow:hidden; border:1px solid #dfe7e1; border-radius:13px; background:#fff; }
+.filters { min-height:78px; display:flex; align-items:center; gap:10px; padding:14px 20px; border-bottom:1px solid #dfe7e1; }
+.orderSearch,.selectWrap,.dateSelect { height:44px; display:flex; align-items:center; gap:10px; padding:0 13px; border:1px solid #dce5df; border-radius:9px; background:#fff; color:#7b8980; }
+.orderSearch { flex:1 1 290px; max-width:360px; }
+.orderSearch input { font-size:14px; }
+.selectWrap { position:relative; flex:1 1 150px; min-width:130px; max-width:175px; color:#55665c; }
+.selectWrap select,.dateSelect select { width:100%; appearance:none; border:0; outline:0; background:transparent; color:#43554a; font:inherit; font-size:13px; cursor:pointer; }
+.selectWrap svg { flex:0 0 auto; pointer-events:none; }
+.dateSelect { flex:0 0 auto; min-width:105px; gap:8px; color:#586a5e; }
+.dateSelect select { width:auto; }
+.tableTitle { min-height:54px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:1px solid #dfe7e1; }
+.tableTitle strong { color:#17261c; font-size:15px; }
+.tableTitle span { color:#74847b; font-size:12px; }
+.tableScroll { overflow:auto; }
+.ordersTable { width:100%; min-width:960px; border-collapse:collapse; text-align:left; }
+.ordersTable th { height:43px; padding:0 15px; background:#fafcfb; color:#718178; font-size:10px; font-weight:650; letter-spacing:.3px; text-transform:uppercase; white-space:nowrap; }
+.ordersTable td { height:61px; padding:0 15px; border-top:1px solid #e7ede9; color:#506257; font-size:13px; white-space:nowrap; }
+.orderId { color:#17251c !important; font-weight:700; }
+.tableBadge { display:inline-flex; align-items:center; padding:6px 8px; border:1px solid #dce5df; border-radius:7px; background:#f8faf9; color:#26392d; font-size:12px; font-weight:600; }
+.amount { color:#17251c !important; font-weight:700; }
+.statusBadge { display:inline-flex; align-items:center; gap:7px; padding:7px 10px; border-radius:19px; font-size:11px; font-weight:600; }
+.statusBadge i { width:7px; height:7px; border-radius:50%; background:currentColor; }
+.pending { background:#fff6e7; color:#d77c00; }
+.generated { background:#eff5fd; color:#3971b7; }
+.paid { background:#edf8f0; color:#178149; }
+.detailsButton { width:34px; height:34px; display:grid; place-items:center; border:1px solid #dce5df; border-radius:7px; background:#fff; color:#65786c; }
+.detailsButton:hover { border-color:#91c5a1; background:#f2f8f4; color:#177b42; }
+.emptyState { height:120px !important; color:#74847b !important; text-align:center; }
+.modalBackdrop { position:fixed; z-index:1000; inset:0; display:grid; place-items:center; padding:20px; background:rgb(17 30 22 / 42%); }
+.orderModal { width:min(100%,520px); max-height:85vh; overflow:auto; padding:24px; border:1px solid #dce5df; border-radius:14px; background:#fff; box-shadow:0 20px 60px rgb(15 35 22 / 20%); }
+.modalHeader { display:flex; justify-content:space-between; gap:16px; padding-bottom:16px; border-bottom:1px solid #e7ede9; }
+.modalHeader h3 { margin:0 0 7px; color:#17251c; font-size:20px; }
+.modalHeader p { margin:0; color:#718078; font-size:13px; }
+.modalHeader button { width:36px; height:36px; display:grid; place-items:center; border:1px solid #e2e9e4; border-radius:8px; background:#fff; color:#53645a; }
+.modalItems { display:flex; flex-direction:column; gap:13px; padding:18px 0; }
+.modalItems > div,.modalTotal { display:flex; justify-content:space-between; gap:12px; color:#53665a; font-size:14px; }
+.modalItems strong,.modalTotal strong { color:#223329; }
+.modalTotal { padding:16px 0; border-top:1px solid #e7ede9; font-weight:700; }
+.modalStatuses { display:flex; flex-wrap:wrap; gap:10px; }
+.modalStatuses span { padding:8px 10px; border-radius:18px; background:#f0f6f2; color:#267346; font-size:12px; font-weight:600; }
+@media(max-width:1150px) { .pageContent { padding:24px 20px; } .filters { flex-wrap:wrap; } .orderSearch { max-width:none; } .selectWrap { flex:1 1 160px; max-width:none; } }
+@media(max-width:720px) { .topBar { min-height:62px; padding:0 12px; } .topBar h1 { font-size:16px; } .topActions { gap:7px; } .globalSearch { width:38px; height:38px; justify-content:center; padding:0; } .globalSearch input,.accountButton > span:nth-child(2),.accountButton > svg { display:none; } .notificationButton { width:38px; height:38px; } .accountButton { padding-left:7px; } .avatar { width:36px; height:36px; } .pageContent { padding:19px 12px; } .pageHeading { align-items:flex-start; flex-direction:column; gap:12px; margin-bottom:15px; } .pageHeading h2 { font-size:24px; margin-bottom:7px; } .pageHeading p { font-size:13px; } .filters { gap:8px; padding:10px; } .orderSearch { flex-basis:100%; height:42px; } .selectWrap { flex-basis:calc(50% - 4px); min-width:0; height:40px; padding:0 9px; } .selectWrap select { font-size:12px; } .dateSelect { height:40px; padding:0 9px; } .tableTitle { min-height:48px; padding:0 12px; } .ordersTable th { height:38px; } .ordersTable td { height:54px; font-size:12px; } }

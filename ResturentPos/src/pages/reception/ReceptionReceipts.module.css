@@ -1,0 +1,81 @@
+.receiptsPage { height:100%; min-height:0; display:flex; flex-direction:column; overflow:hidden; border-top:4px solid #292929; background:#f6f8f6; color:#19241d; font-family:var(--font-family,Arial,sans-serif); }
+.topBar { min-height:110px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:0 44px 0 48px; background:#fff; border-bottom:1px solid #dfe7e1; }
+.topBar h1 { margin:0; color:#202923; font-size:23px; font-weight:700; }
+.topActions { display:flex; align-items:center; gap:20px; }
+.globalSearch { width:min(495px,36vw); height:58px; display:flex; align-items:center; gap:14px; padding:0 20px; border:1px solid #dce5df; border-radius:11px; background:#f7f9f8; color:#7b8980; }
+.globalSearch input { width:100%; min-width:0; border:0; outline:0; background:transparent; color:#24332a; font:inherit; font-size:16px; }
+.globalSearch input::placeholder { color:#8c9790; }
+.notificationButton { position:relative; width:54px; height:54px; display:grid; place-items:center; border:1px solid #dce5df; border-radius:12px; background:#fff; color:#53645a; }
+.notificationButton i { position:absolute; top:11px; right:12px; width:9px; height:9px; border:1px solid #fff; border-radius:50%; background:#ed8d13; }
+.accountButton { display:flex; align-items:center; gap:14px; padding:0 0 0 20px; border:0; border-left:1px solid #e2e9e4; background:transparent; color:#314137; text-align:left; }
+.accountButton > span:nth-child(2) { display:flex; flex-direction:column; gap:4px; min-width:120px; }
+.accountButton strong { color:#26352c; font-size:15px; }
+.accountButton small { color:#718078; font-size:14px; }
+.avatar { width:54px; height:54px; display:grid; place-items:center; border-radius:50%; background:#e8f1eb; color:#176c3c; font-size:16px; font-weight:700; }
+.pageContent { min-width:0; min-height:0; flex:1; overflow:auto; padding:42px 32px 32px; }
+.pageHeading { display:flex; align-items:center; justify-content:space-between; gap:22px; margin-bottom:36px; }
+.pageHeading h1 { margin:0 0 17px; color:#101d16; font-size:34px; line-height:1.1; font-weight:500; letter-spacing:-.6px; }
+.pageHeading p { margin:0; color:#6b7f73; font-size:17px; }
+.exportButton { min-height:51px; display:flex; align-items:center; justify-content:center; gap:12px; padding:0 19px; border:1px solid #b8d8c2; border-radius:9px; background:#fff; color:#126f3b; font-size:14px; font-weight:650; white-space:nowrap; }
+.exportButton:hover,.rowActions button:hover,.modalActions button:hover { background:#f0f8f2; }
+.summaryCard { min-height:104px; display:grid; grid-template-columns:1fr 1fr 2fr; align-items:center; margin-bottom:22px; padding:18px 30px; border:1px solid #dfe7e1; border-radius:13px; background:#fff; }
+.summaryMetric { min-width:0; min-height:50px; display:flex; align-items:center; gap:17px; padding-right:30px; }
+.summaryMetric + .summaryMetric { padding-left:38px; border-left:1px solid #dfe7e1; }
+.summaryIcon { width:58px; height:58px; flex:0 0 58px; display:grid; place-items:center; border-radius:13px; }
+.greenIcon { background:#edf8f0; color:#168348; }
+.blueIcon { background:#edf4fc; color:#3474bf; }
+.summaryMetric > div { display:flex; flex-direction:column; gap:7px; }
+.summaryMetric small,.paymentSplit > small { color:#6c7d73; font-size:13px; }
+.summaryMetric strong { color:#111c15; font-size:24px; line-height:1.1; font-weight:700; white-space:nowrap; }
+.paymentSplit { min-height:50px; display:flex; flex-direction:column; justify-content:center; gap:14px; padding-left:38px; border-left:1px solid #dfe7e1; }
+.paymentSplit > div { display:flex; align-items:center; gap:28px; }
+.paymentSplit span { color:#53675b; font-size:13px; font-weight:600; white-space:nowrap; }
+.receiptsCard { min-width:0; overflow:hidden; border:1px solid #dfe7e1; border-radius:13px; background:#fff; }
+.filters { min-height:102px; display:flex; align-items:center; gap:13px; padding:20px 27px; border-bottom:1px solid #dfe7e1; }
+.searchBox,.methodSelect,.dateInput { height:58px; display:flex; align-items:center; gap:13px; padding:0 18px; border:1px solid #dce5df; border-radius:11px; background:#fff; color:#7b8980; }
+.searchBox { flex:1 1 360px; max-width:412px; }
+.searchBox input { width:100%; min-width:0; border:0; outline:0; background:transparent; color:#24332a; font:inherit; font-size:16px; }
+.searchBox input::placeholder { color:#8c9790; }
+.methodSelect { position:relative; flex:1 1 215px; max-width:245px; color:#55665c; }
+.methodSelect select { width:100%; appearance:none; border:0; outline:0; background:transparent; color:#43554a; font:inherit; font-size:15px; cursor:pointer; }
+.methodSelect > span { width:9px; height:9px; margin:-5px 3px 0 0; transform:rotate(45deg); border-right:2px solid #5d7064; border-bottom:2px solid #5d7064; pointer-events:none; }
+.dateInput { min-width:162px; color:#586a5e; }
+.dateInput input { width:100%; border:0; outline:0; background:transparent; color:#43554a; font:inherit; font-size:14px; }
+.dateInput input::-webkit-calendar-picker-indicator { cursor:pointer; }
+.tableTitle { min-height:70px; display:flex; align-items:center; justify-content:space-between; padding:0 27px; border-bottom:1px solid #dfe7e1; }
+.tableTitle strong { color:#17261c; font-size:17px; }
+.tableTitle span { color:#74847b; font-size:14px; }
+.tableScroll { overflow:auto; }
+.receiptsTable { width:100%; min-width:1200px; border-collapse:collapse; text-align:left; }
+.receiptsTable th { height:59px; padding:0 20px; background:#fafcfb; color:#718178; font-size:12px; font-weight:650; letter-spacing:.35px; text-transform:uppercase; white-space:nowrap; }
+.receiptsTable td { height:88px; padding:0 20px; border-top:1px solid #e7ede9; color:#506257; font-size:15px; white-space:nowrap; }
+.receiptId { color:#17251c !important; font-weight:700; }
+.tableBadge { display:inline-flex; align-items:center; padding:8px 10px; border:1px solid #dce5df; border-radius:8px; background:#f8faf9; color:#26392d; font-size:14px; font-weight:600; }
+.amount { color:#17251c !important; font-weight:700; }
+.methodText { display:inline-flex; align-items:center; gap:11px; color:#53675b; }
+.dateCell { display:flex; flex-direction:column; gap:6px; color:#53675b; }
+.dateCell small { color:#718178; font-size:12px; }
+.paidBadge { display:inline-flex; align-items:center; gap:8px; padding:9px 13px; border-radius:19px; background:#edf8f0; color:#178149; font-size:13px; font-weight:600; }
+.paidBadge i { width:7px; height:7px; border-radius:50%; background:#178149; }
+.rowActions { display:flex; align-items:center; gap:7px; }
+.rowActions button { min-width:41px; height:41px; display:grid; place-items:center; padding:0 10px; border:1px solid #dce5df; border-radius:8px; background:#fff; color:#168047; font-size:13px; }
+.emptyState { height:120px !important; color:#74847b !important; text-align:center; }
+.modalBackdrop { position:fixed; z-index:1000; inset:0; display:grid; place-items:center; padding:20px; background:rgb(17 30 22 / 42%); }
+.receiptModal { width:min(100%,540px); max-height:85vh; overflow:auto; padding:24px; border:1px solid #dce5df; border-radius:14px; background:#fff; box-shadow:0 20px 60px rgb(15 35 22 / 20%); }
+.modalHeader { display:flex; justify-content:space-between; gap:16px; padding-bottom:16px; border-bottom:1px solid #e7ede9; }
+.modalHeader h2 { margin:0 0 7px; color:#17251c; font-size:21px; }
+.modalHeader p { margin:0; color:#718078; font-size:13px; }
+.closeButton { width:36px; height:36px; display:grid; place-items:center; border:1px solid #e2e9e4; border-radius:8px; background:#fff; color:#53645a; }
+.receiptInfo { display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:18px 0; }
+.receiptInfo span { display:flex; flex-direction:column; gap:5px; color:#7b8980; font-size:12px; }
+.receiptInfo strong { color:#2d3e33; font-size:14px; font-weight:650; }
+.receiptItems { display:flex; flex-direction:column; gap:12px; padding:16px 0; border-top:1px solid #e7ede9; }
+.receiptItems > div { display:flex; justify-content:space-between; gap:14px; color:#53665a; font-size:13px; }
+.receiptItems strong { color:#2d3e33; }
+.receiptTotal { display:flex; align-items:center; justify-content:space-between; padding:15px 0; border-top:1px solid #e7ede9; color:#203127; font-size:15px; font-weight:700; }
+.receiptTotal strong { color:#168047; font-size:18px; }
+.modalActions { display:flex; gap:10px; margin-top:12px; }
+.modalActions button { min-height:42px; display:flex; flex:1; align-items:center; justify-content:center; gap:8px; border:1px solid #b8d8c2; border-radius:8px; background:#fff; color:#126f3b; font-size:13px; font-weight:650; }
+@media(max-width:1000px) { .summaryCard { grid-template-columns:1fr 1fr; row-gap:18px; } .paymentSplit { grid-column:1 / -1; padding:17px 0 0; border-top:1px solid #dfe7e1; border-left:0; } .summaryMetric + .summaryMetric { padding-left:24px; } }
+@media(max-width:680px) { .topBar { min-height:70px; padding:0 14px; } .topBar h1 { font-size:17px; } .topActions { gap:8px; } .globalSearch { width:42px; height:42px; justify-content:center; padding:0; } .globalSearch input,.accountButton > span:nth-child(2),.accountButton > svg { display:none; } .notificationButton { width:42px; height:42px; } .accountButton { padding-left:8px; } .avatar { width:40px; height:40px; } .pageContent { padding:26px 14px; } .pageHeading { align-items:flex-start; flex-direction:column; gap:18px; margin-bottom:22px; } .pageHeading h1 { margin-bottom:9px; font-size:29px; } .pageHeading p { font-size:14px; } .exportButton { min-height:44px; } .summaryCard { grid-template-columns:1fr; padding:18px; } .summaryMetric,.summaryMetric + .summaryMetric { padding:0; border:0; } .summaryMetric + .summaryMetric { padding-top:15px; border-top:1px solid #e7ede9; } .paymentSplit { grid-column:auto; padding-top:15px; } .paymentSplit > div { justify-content:space-between; gap:8px; } .filters { flex-wrap:wrap; gap:9px; padding:13px; } .searchBox { flex-basis:100%; max-width:none; height:48px; } .methodSelect { flex-basis:100%; max-width:none; height:48px; } .dateInput { height:48px; } .tableTitle { min-height:58px; padding:0 15px; } .receiptsTable th { height:48px; } .receiptsTable td { height:70px; font-size:13px; } }
+@media print { :global(body) * { visibility:hidden !important; } .modalBackdrop,.modalBackdrop * { visibility:visible !important; } .modalBackdrop { position:absolute; inset:0; display:block; padding:0; background:#fff; } .receiptModal { width:100%; max-height:none; overflow:visible; margin:0; padding:24px; border:0; border-radius:0; box-shadow:none; } .closeButton,.modalActions { display:none !important; } }

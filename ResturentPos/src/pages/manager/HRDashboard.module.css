@@ -1,0 +1,205 @@
+.dashboardContainer {
+  padding: 8px 12px;
+  background-color: #F3F4F6;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.headerLeft h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.headerLeft p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.headerRight {
+  display: flex;
+}
+
+.refreshBtn {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refreshBtn:hover {
+  background-color: #f1f5f9;
+}
+
+/* CARDS GRID */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardLabel {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.cardValue {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Backgrounds */
+.cardWhite {
+  background-color: white;
+  border-color: #e2e8f0;
+}
+.cardGreen {
+  background-color: #f0fdf4;
+  border-color: #dcfce7;
+}
+.cardOrange {
+  background-color: #fff7ed;
+  border-color: #ffedd5;
+}
+.cardBlue {
+  background-color: #eff6ff;
+  border-color: #dbeafe;
+}
+.cardPurple {
+  background-color: #faf5ff;
+  border-color: #f3e8ff;
+}
+.cardRed {
+  background-color: #fef2f2;
+  border-color: #fee2e2;
+}
+
+/* Text Colors */
+.valBlack { color: #17202A; }
+.valGreen { color: #16a34a; }
+.valOrange { color: #ea580c; }
+.valBlue { color: #2563eb; }
+.valPurple { color: #9333ea; }
+.valRed { color: #dc2626; }
+.valDark { color: #334155; }
+
+/* BOTTOM PANELS */
+.bottomPanels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.panel {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.panelHeader h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.purpleLink {
+  color: #9333ea;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.purpleLink:hover {
+  text-decoration: underline;
+}
+
+/* Headcount Empty Body */
+.panelBodyEmpty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 300px;
+}
+
+/* HR Modules Grid */
+.modulesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 24px;
+}
+
+.moduleCard {
+  background-color: #F3F4F6;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.moduleIcon {
+  font-size: 20px;
+}
+
+.moduleText {
+  display: flex;
+  flex-direction: column;
+}
+
+.moduleText h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #17202A;
+}
+
+.moduleText p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+}

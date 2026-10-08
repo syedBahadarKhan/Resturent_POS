@@ -1,0 +1,148 @@
+.reportsContainer {
+  padding: 8px 12px;
+  background-color: #F3F4F6;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.headerLeft h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #17202A;
+}
+
+.headerLeft p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.headerRight {
+  display: flex;
+  gap: 12px;
+}
+
+.btnWhite, .btnRed, .btnGreen {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btnWhite {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.btnWhite:hover {
+  background-color: #f1f5f9;
+}
+
+.btnRed {
+  background-color: #e11d48;
+  color: white;
+}
+
+.btnRed:hover {
+  background-color: #be123c;
+}
+
+.btnGreen {
+  background-color: #1B7F43;
+  color: white;
+}
+
+.btnGreen:hover {
+  background-color: #047857;
+}
+
+/* SECTION BLOCKS */
+.sectionBlock {
+  margin-bottom: 32px;
+}
+
+.greenHeading {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1B7F43;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px 0;
+}
+
+.blueHeading {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px 0;
+}
+
+/* CARD GRID */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.reportCard {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.reportCard:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.cardActive {
+  background-color: #ecfdf5;
+  border-color: #34d399;
+}
+
+.cardIcon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #17202A;
+  margin-bottom: 4px;
+}
+
+.cardActive .cardTitle {
+  color: #1B7F43;
+}
+
+.cardDesc {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.cardActive .cardDesc {
+  color: #1B7F43;
+}

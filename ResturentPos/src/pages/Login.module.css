@@ -1,0 +1,160 @@
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+  padding: var(--spacing-4);
+}
+
+.loginCard {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 440px;
+  padding: var(--spacing-8);
+}
+
+.logoContainer {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.logoIcon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary-green);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-4);
+  box-shadow: 0 4px 14px 0 rgba(27, 127, 67, 0.39);
+}
+
+.logoContainer h1 {
+  font-size: 24px;
+  margin-bottom: var(--spacing-1);
+}
+
+.logoContainer p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.formGroup input {
+  padding: var(--spacing-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.formGroup input:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px var(--primary-green-light);
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.forgot {
+  color: var(--primary-green);
+  font-weight: 500;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.loginButton {
+  background-color: var(--primary-green);
+  color: white;
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: var(--spacing-2);
+  transition: background-color 0.2s ease;
+}
+
+.loginButton:hover {
+  background-color: var(--primary-green-hover);
+}
+
+.errorMessage {
+  background-color: var(--error-bg);
+  color: var(--error);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.demoAccounts {
+  margin-top: var(--spacing-8);
+  padding-top: var(--spacing-6);
+  border-top: 1px solid var(--border-color);
+}
+
+.demoAccounts p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.demoButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2);
+}
+
+.demoButtons button {
+  padding: var(--spacing-2);
+  font-size: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.demoButtons button:hover {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
