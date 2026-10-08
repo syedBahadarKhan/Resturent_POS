@@ -1,0 +1,294 @@
+.pageWrapper {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* TOP METRICS CARD */
+.metricsCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.metricBox {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e5e7eb;
+}
+
+.metricBox:first-child {
+  width: 200px;
+}
+
+.metricBox:nth-child(2) {
+  width: 200px;
+}
+
+.metricBoxTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.metricValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.metricValueOrange {
+  color: #f97316;
+}
+
+.metricSubtext {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.flowBox {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flowTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.flowDots {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.flowItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.dotBlue { width: 8px; height: 8px; border-radius: 50%; background-color: #3b82f6; }
+.dotOrange { width: 8px; height: 8px; border-radius: 50%; background-color: #f97316; }
+.dotGreen { width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; }
+
+/* MAIN CONTENT AREA */
+.mainCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.filtersHeader {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tab {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background-color: #f3f4f6;
+}
+
+.tabActive {
+  background-color: #ecfdf5;
+  color: #10b981;
+}
+
+.tabBadge {
+  background-color: #d1fae5;
+  color: #059669;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.searchBar {
+  position: relative;
+  width: 280px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+  background-color: #f9fafb;
+}
+
+.searchInput:focus {
+  border-color: #10b981;
+}
+
+/* TABLE */
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ordersTable th {
+  text-align: left;
+  padding: 16px 24px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #fafafa;
+}
+
+.ordersTable td {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+.ordersTable tr:last-child td {
+  border-bottom: none;
+}
+
+.orderIdBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.orderId {
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+}
+
+.orderDate {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.customerBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tableNo {
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+}
+
+.customerName {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.itemsCount {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.timeText {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statusPreparing {
+  background-color: #ffedd5;
+  color: #c2410c;
+}
+
+.statusReady {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.statusSent {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.viewOrderBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #10b981;
+  font-weight: 700;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.2s;
+}
+
+.viewOrderBtn:hover {
+  opacity: 0.8;
+}

@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useStore from '../../store/useStore';
 import styles from './NewOrder.module.css';
-import { Search, Minus, Plus, Trash2, Send, ShoppingCart, ArrowRight, Bell } from 'lucide-react';
+import { Search, Minus, Plus, Trash2, Send, ShoppingCart, ArrowRight, Bell, FileText, Edit3 } from 'lucide-react';
 
 const NewOrder = () => {
   const menu = useStore(state => state.menu);
@@ -140,7 +140,7 @@ const NewOrder = () => {
                 className={`${styles.categoryBtn} ${selectedCategory === cat ? styles.categoryActive : ''}`}
                 onClick={() => setSelectedCategory(cat)}
               >
-                {cat}
+                <span>{cat || 'Category'}</span>
               </button>
             ))}
           </div>
@@ -148,7 +148,13 @@ const NewOrder = () => {
           <div className={styles.menuGrid}>
             {filteredMenu.map(item => (
               <div key={item.id} className={styles.menuItem}>
-                <div className={styles.itemImage} style={{backgroundImage: `url(${item.image || 'https://via.placeholder.com/300x150'})`}}>
+                <div 
+                  className={styles.itemImage} 
+                  style={{
+                    backgroundImage: `url(${item.image || 'https://via.placeholder.com/300x150'})`,
+                    backgroundColor: '#e2e8f0'
+                  }}
+                >
                   <div className={styles.availableBadge}>
                     <span className={styles.dot}></span> Available
                   </div>
@@ -174,17 +180,29 @@ const NewOrder = () => {
         <div className={styles.rightPanel}>
           <div className={styles.cartHeader}>
             <h2>Current Order</h2>
-            <div className={styles.tableSelectorWrapper}>
-              <select className={styles.tableSelector} value={selectedTable} onChange={e => setSelectedTable(e.target.value)}>
-                <option value="">Select a Table</option>
-                {availableTables.map(t => (
-                  <option key={t.id} value={t.number}>Table {t.number}</option>
-                ))}
-              </select>
-            </div>
+            <p className={styles.cartSubheader}>Table T-08 · Ahmed Khan</p>
           </div>
 
           <div className={styles.cartItems}>
+            {cart.length > 0 && (
+              <>
+                <div className={styles.orderBanner}>
+                  <div className={styles.orderBannerLeft}>
+                    <FileText size={20} color="#475569" strokeWidth={1.5} />
+                    <div className={styles.orderBannerText}>
+                      <span className={styles.orderBannerTitle}>New order</span>
+                      <span className={styles.orderBannerId}>#ORD-1048</span>
+                    </div>
+                  </div>
+                  <div className={styles.draftBadge}>
+                    <span className={styles.draftDot}></span>
+                    <span>Draft</span>
+                  </div>
+                </div>
+                <div className={styles.bannerDivider}></div>
+              </>
+            )}
+
             {cart.length === 0 ? (
               <div className={styles.emptyCart}>
                 <div className={styles.emptyIcon}>
@@ -199,16 +217,21 @@ const NewOrder = () => {
                 <div key={item.id} className={styles.cartItem}>
                   <div className={styles.cartItemInfo}>
                     <div className={styles.cartItemName}>{item.name}</div>
-                    <div className={styles.cartItemPrice}>Rs. {item.price * item.quantity}</div>
+                    <div className={styles.cartItemPrice}>Rs. {(item.price * item.quantity).toLocaleString()}</div>
                   </div>
                   <div className={styles.cartItemControls}>
-                    <div className={styles.qtyControls}>
-                      <button onClick={() => updateQuantity(item.id, -1)}><Minus size={14}/></button>
-                      <span>{item.quantity}</span>
-                      <button onClick={() => updateQuantity(item.id, 1)}><Plus size={14}/></button>
+                    <div className={styles.qtyEditGroup}>
+                      <div className={styles.qtyControls}>
+                        <button onClick={() => updateQuantity(item.id, -1)}><Minus size={14} color="#64748b" /></button>
+                        <span>{item.quantity}</span>
+                        <button onClick={() => updateQuantity(item.id, 1)}><Plus size={14} color="#64748b" /></button>
+                      </div>
+                      <button className={styles.editBtn}>
+                        <Edit3 size={14} /> Edit
+                      </button>
                     </div>
                     <button className={styles.removeBtn} onClick={() => removeFromCart(item.id)}>
-                      <Trash2 size={16} />
+                      <Trash2 size={18} />
                     </button>
                   </div>
                 </div>
@@ -216,37 +239,39 @@ const NewOrder = () => {
             )}
           </div>
 
-          <div className={styles.cartFooter}>
-            <div className={styles.totals}>
-              <div className={styles.totalRow}>
-                <span>Subtotal</span>
-                <span>Rs. {subtotal.toLocaleString()}</span>
+          {cart.length > 0 && (
+            <div className={styles.cartFooter}>
+              <div className={styles.totals}>
+                <div className={styles.totalRow}>
+                  <span>Subtotal</span>
+                  <span>Rs. {subtotal.toLocaleString()}</span>
+                </div>
+                <div className={styles.totalRow}>
+                  <span>Tax (5%)</span>
+                  <span>Rs. {tax.toLocaleString()}</span>
+                </div>
+                <div className={styles.divider}></div>
+                <div className={`${styles.totalRow} ${styles.grandTotal}`}>
+                  <span>Estimated total</span>
+                  <span>Rs. {total.toLocaleString()}</span>
+                </div>
+                <p className={styles.paymentNote}>Payment will be handled separately by the cashier.</p>
               </div>
-              <div className={styles.totalRow}>
-                <span>Tax (5%)</span>
-                <span>Rs. {tax.toLocaleString()}</span>
-              </div>
-              <div className={styles.divider}></div>
-              <div className={`${styles.totalRow} ${styles.grandTotal}`}>
-                <span>Estimated total</span>
-                <span>Rs. {total.toLocaleString()}</span>
-              </div>
-              <p className={styles.paymentNote}>Payment will be handled separately by the cashier.</p>
-            </div>
 
-            <button 
-              className={styles.sendBtn} 
-              disabled={cart.length === 0 || !selectedTable}
-              onClick={handleSendOrder}
-            >
-              <ArrowRight size={16} /> SEND TO KITCHEN + CASHIER
-            </button>
-            
-            <div className={styles.bottomButtons}>
-              <button className={styles.saveDraftBtn}>Save draft</button>
-              <button className={styles.clearBtn} onClick={clearOrder}>Clear order</button>
+              <button 
+                className={styles.sendBtn} 
+                disabled={cart.length === 0}
+                onClick={handleSendOrder}
+              >
+                <ArrowRight size={18} /> SEND TO KITCHEN + CASHIER
+              </button>
+              
+              <div className={styles.bottomButtons}>
+                <button className={styles.saveDraftBtn}>Save draft</button>
+                <button className={styles.clearBtn} onClick={clearOrder}>Clear order</button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
