@@ -19,6 +19,8 @@ import SalesInvoices from './pages/manager/SalesInvoices';
 import ViewAsDashboard from './pages/manager/ViewAsDashboard';
 import WaiterDashboard from './pages/waiter/WaiterDashboard';
 import NewOrder from './pages/waiter/NewOrder';
+import MyOrders from './pages/waiter/MyOrders';
+import WaiterProfile from './pages/waiter/WaiterProfile';
 
 import Expenses from './pages/manager/Expenses';
 import FinancialReports from './pages/manager/FinancialReports';
@@ -120,7 +122,8 @@ const App = () => {
         }>
           <Route index element={<WaiterDashboard />} />
           <Route path="new-order" element={<NewOrder />} />
-          <Route path="my-orders" element={<Placeholder title="My Orders" />} />
+          <Route path="my-orders" element={<MyOrders />} />
+          <Route path="profile" element={<WaiterProfile />} />
         </Route>
 
         {/* Kitchen Routes */}

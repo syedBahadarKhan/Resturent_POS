@@ -1,10 +1,134 @@
 .pageWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contentContainer {
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* TOPBAR */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.topBarLeft h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.topBarLeft p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.globalSearchBar {
+  position: relative;
+  width: 280px;
+}
+
+.globalSearchBar input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   background-color: #f9fafb;
-  min-height: 100vh;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+}
+
+.globalSearchBar input:focus {
+  border-color: #10b981;
+  background-color: #ffffff;
+}
+
+.notificationWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d1fae5;
+  color: #047857;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.profileRole {
+  font-size: 12px;
+  color: #6b7280;
 }
 
 /* TOP METRICS CARD */
