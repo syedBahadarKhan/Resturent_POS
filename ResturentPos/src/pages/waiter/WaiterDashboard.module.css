@@ -1,10 +1,10 @@
-
 .dashboard {
   display: flex;
   flex-direction: column;
   padding: 0;
   background-color: #f8fafc;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .header {
@@ -12,10 +12,10 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  height: 100px;
-  flex: 0 0 100px;
-  padding: 0 32px;
+  gap: 12px;
+  height: 64px;
+  flex: 0 0 64px;
+  padding: 0 16px;
   background-color: #ffffff;
   border-bottom: 1px solid #e2e8e5;
 }
@@ -27,7 +27,7 @@
 }
 
 .headerLeft h1 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: #1e293b;
   margin: 0;
@@ -142,34 +142,34 @@
 }
 
 .contentWrapper {
-  padding: 24px 32px;
+  padding: 12px 16px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
 }
 
 
 .statusGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 12px;
 }
 
 .metricCard {
   background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
   border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
 .metricIconBox {
-  width: 54px;
-  height: 54px;
-  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,14 +182,14 @@
 }
 
 .metricTitle {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 600;
   color: #64748b;
   margin-bottom: 2px;
 }
 
 .metricValue {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
   color: #0f172a;
   line-height: 1.1;
@@ -197,7 +197,7 @@
 }
 
 .metricSub {
-  font-size: 12px;
+  font-size: 10px;
   color: #94a3b8;
 }
 
@@ -206,10 +206,10 @@
   border: 1px solid #bbf7d0;
   border-left: 4px solid #16a34a;
   border-radius: 8px;
-  padding: 16px 20px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .alertIconBox {
@@ -238,14 +238,14 @@
 }
 
 .alertTitle {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   color: #1e293b;
-  margin: 0 0 4px 0;
+  margin: 0 0 2px 0;
 }
 
 .alertSub {
-  font-size: 13px;
+  font-size: 11px;
   color: #64748b;
   margin: 0;
 }
@@ -410,10 +410,10 @@
 }
 
 .tablesHeader h2 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   color: #1e293b;
-  margin: 0 0 6px 0;
+  margin: 0 0 2px 0;
 }
 
 .tablesSubtext {
@@ -430,38 +430,39 @@
 }
 
 .legendItem {
-  font-size: 13px;
+  font-size: 10px;
   color: #64748b;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
-.dotAvailable { width: 8px; height: 8px; border-radius: 50%; background-color: #cbd5e1; }
+.dotAvailable { width: 8px; height: 8px; border-radius: 50%; background-color: #475569; }
 .dotInService { width: 8px; height: 8px; border-radius: 50%; background-color: #f97316; }
-.dotReady { width: 8px; height: 8px; border-radius: 50%; background-color: #16a34a; }
-.dotOccupied { width: 8px; height: 8px; border-radius: 50%; background-color: #64748b; }
+.dotReady { width: 8px; height: 8px; border-radius: 50%; background-color: #15803d; }
+.dotOccupied { width: 8px; height: 8px; border-radius: 50%; background-color: #475569; }
+.dotPreparing { width: 8px; height: 8px; border-radius: 50%; background-color: #c2410c; }
 
 .tablesGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 12px;
 }
 
 .tableCard {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #e2e8f0;
-  padding: 20px;
+  padding: 10px 12px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  border-top-width: 4px;
+  gap: 8px;
+  border-top-width: 2px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
-.tableAvailable { border-top-color: #cbd5e1; }
-.tableOccupied { border-top-color: #e2e8f0; } /* Standard gray for occupied */
+.tableAvailable { border-top-color: #e2e8f0; }
+.tableOccupied { border-top-color: #e2e8f0; }
 .tablePreparing { border-top-color: #fb923c; }
 .tableReady { border-top-color: #22c55e; }
 
@@ -478,77 +479,80 @@
 }
 
 .tableLabelText {
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 700;
   color: #94a3b8;
   letter-spacing: 0.5px;
 }
 
 .tableNumber {
-  font-size: 28px;
+  font-size: 16px;
   font-weight: 700;
   color: #0f172a;
   line-height: 1;
+  margin-top: 2px;
 }
 
 .statusBadge {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 12px;
+  gap: 4px;
+  padding: 0;
+  font-size: 10px;
   font-weight: 600;
 }
 
-.tableAvailable .statusBadge { background: #f1f5f9; color: #475569; }
-.tableOccupied .statusBadge { background: #f1f5f9; color: #475569; }
-.tablePreparing .statusBadge { background: #fff7ed; color: #c2410c; }
-.tableReady .statusBadge { background: #f0fdf4; color: #15803d; }
+.tableAvailable .statusBadge { background: transparent; color: #475569; }
+.tableOccupied .statusBadge { background: transparent; color: #475569; }
+.tablePreparing .statusBadge { background: transparent; color: #c2410c; }
+.tableReady .statusBadge { background: transparent; color: #15803d; }
 
 .seatsInfo {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   color: #94a3b8;
-  font-size: 13px;
-  margin-top: 4px;
+  font-size: 10px;
+  margin-top: 0;
 }
 
 .customerInfo {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   margin-top: auto;
-  padding-top: 16px;
+  padding-top: 4px;
 }
 
 .customerName {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
   color: #1e293b;
 }
 
 .orderDetailsText {
-  font-size: 13px;
-  color: #64748b;
+  font-size: 10px;
+  color: #94a3b8;
 }
 
 .cardActionBtn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   color: #16a34a;
-  font-size: 14px;
-  font-weight: 650;
-  padding-top: 8px;
-  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 12px;
+  margin: 4px -12px -10px -12px;
   background: none;
   border: none;
+  border-top: 1px solid #f1f5f9;
   cursor: pointer;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .cardActionBtn:hover {
+  background-color: #f8fafc;
   color: #15803d;
 }
